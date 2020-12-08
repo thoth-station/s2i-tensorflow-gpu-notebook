@@ -2,8 +2,10 @@
 
 approvers:
   - goern
-  - fridex
-reviewers:
-  - pacospace
   - harshad16
-  - kpostoffice
+  - vpavlin
+reviewers:
+  - harshad16
+  - vpavlin
+  - fridex
+  - pacospace
