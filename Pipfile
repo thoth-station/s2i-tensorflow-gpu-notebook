@@ -31,4 +31,4 @@ statsmodels = "==0.10.*"
 tensorflow-gpu = ">=2.0.0"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
