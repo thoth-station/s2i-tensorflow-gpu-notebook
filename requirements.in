@@ -1,16 +1,16 @@
-# packages
-
-### scipy-notebook
-
-beautifulsoup4
-bokeh
-cloudpickle
+--index-url https://pypi.org/simple
+#
+# Default dependencies
+#
+black==21.6b0
+bokeh==2.3.3
+boto3==1.21.0
 cython
-dask
 dill
 distributed
 h5py
-ipywidgets
+ipywidgets>=7.5.0
+kafka-python
 matplotlib
 pandas
 plotly
@@ -22,12 +22,12 @@ scipy
 seaborn
 sqlalchemy
 statsmodels
-
-### tensorflow-notebook
-
-tensorflow-gpu==2.3.1
-
-# extensions
-
-jupyter-bokeh
+tensorflow-gpu==2.7.0
+jupyter-server-proxy
+jupyter-bokeh<=3.0.2
+jupyterlab==3.2.4
 jupyter-tensorboard
+jupyterlab-git~=0.32.0
+jupyterlab-s3-browser==0.10.1
+kfp==1.6.3
+elyra-python-editor-extension==3.0.5
