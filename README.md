@@ -38,7 +38,11 @@ We have configured this repository to used pipenv and micropipenv python depende
 
 ```
 - jupyter-bokeh
+- jupyterlab-git
+- jupyterlab-s3-browser
 - jupyter-tensorboard
+- jupyter-server-proxy
+- elyra-python-editor-extension
 ```
 
 ## Importing the TensorFlow Notebook
@@ -76,9 +80,10 @@ Instead of using the pre-built version of the minimal notebook, you can build th
 With [Thoth](https://thoth-station.ninja/) advise
 
 ```bash
-s2i build . quay.io/thoth-station/s2i-minimal-notebook:latest \
+s2i build . quay.io/thoth-station/s2i-minimal-py38-notebook:latest \
 --env ENABLE_PIPENV=1 \
 --env THOTH_ADVISE=1 \
+--env THAMOS_RUNTIME_ENVIRONMENT="" \
 --env THOTH_DRY_RUN=0 \
 --env THOTH_PROVENANCE_CHECK=1 \
 s2i-tensorflow-notebook
@@ -87,8 +92,9 @@ s2i-tensorflow-notebook
 Without [Thoth](https://thoth-station.ninja/) advise
 
 ```bash
-s2i build . quay.io/thoth-station/s2i-minimal-notebook:latest \
+s2i build . quay.io/thoth-station/s2i-minimal-py38-notebook:latest \
 --env ENABLE_PIPENV=1 \
+--env THAMOS_RUNTIME_ENVIRONMENT="" \
 --env THOTH_ADVISE=0 \
 --env THOTH_ERROR_FALLBACK=1 \
 --env THOTH_DRY_RUN=1 \
